@@ -33,16 +33,4 @@ const calculateExercises = (
   return info;
 };
 
-const target: number = Number(process.argv[2]);
-const dailyExerciseStrings: string[] = process.argv.slice(
-  3,
-  process.argv.length
-);
-
-const dailyExercises: number[] = dailyExerciseStrings.map((str) => Number(str));
-
-console.log("target:", target, "array:", dailyExercises);
-
-console.log(calculateExercises(dailyExercises, target));
-
 export default calculateExercises;
