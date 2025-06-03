@@ -15,7 +15,7 @@ const calculateExercises = (
     dailyExercises.reduce(
       (accumulator, currentValue) => accumulator + currentValue
     ) / dailyExercises.length;
-  const info = {
+  const info: info = {
     periodLength: dailyExercises.length,
     trainingDays: dailyExercises.filter((num) => num != 0).length,
     targetValue: targetAmount,
@@ -44,3 +44,5 @@ const dailyExercises: number[] = dailyExerciseStrings.map((str) => Number(str));
 console.log("target:", target, "array:", dailyExercises);
 
 console.log(calculateExercises(dailyExercises, target));
+
+export default calculateExercises;
